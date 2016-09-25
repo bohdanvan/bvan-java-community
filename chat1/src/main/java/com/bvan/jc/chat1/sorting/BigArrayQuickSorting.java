@@ -1,4 +1,4 @@
-package com.bvan.jc.chat1.array;
+package com.bvan.jc.chat1.sorting;
 
 import java.util.Arrays;
 import java.util.Random;
