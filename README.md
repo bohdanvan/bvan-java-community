@@ -29,3 +29,5 @@ Java Community. Чат с Богданом
 
 **Модули**: 
 [employee](https://github.com/bohdanvan/bvan-java-community/tree/master/employee/src/main/java/com/bvan/jc/chat2/employee)
+
+**Чат в Skype**: [Skype Link](https://join.skype.com/g9BWsghKPXrQ)
