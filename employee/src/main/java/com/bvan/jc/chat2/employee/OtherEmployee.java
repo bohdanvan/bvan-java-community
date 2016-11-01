@@ -30,7 +30,6 @@ public class OtherEmployee extends AbstractEmployee {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", patronymic='" + patronymic + '\'' +
                 ", birthDate=" + birthDate +
                 ", hireDate=" + hireDate +
                 ", position=" + position +

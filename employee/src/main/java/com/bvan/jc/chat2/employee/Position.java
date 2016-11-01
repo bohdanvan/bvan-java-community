@@ -6,9 +6,22 @@ package com.bvan.jc.chat2.employee;
 public enum Position {
     SECRETARY(0);
 
-    private final int value;
+    private final int number;
 
-    Position(int value) {
-        this.value = value;
+    public static Position ofNumber(int number) {
+        for (Position position : Position.values()) {
+            if (position.number == number) {
+                return position;
+            }
+        }
+        return null;
+    }
+
+    Position(int number) {
+        this.number = number;
+    }
+
+    public int getNumber() {
+        return number;
     }
 }

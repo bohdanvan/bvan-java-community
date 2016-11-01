@@ -5,9 +5,9 @@ package com.bvan.jc.chat2.employee;
  */
 public class Employee extends AbstractEmployee {
 
-    private long managerId;
+    private Long managerId;
 
-    public long getManagerId() {
+    public Long getManagerId() {
         return managerId;
     }
 
@@ -21,7 +21,6 @@ public class Employee extends AbstractEmployee {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", patronymic='" + patronymic + '\'' +
                 ", birthDate=" + birthDate +
                 ", hireDate=" + hireDate +
                 ", managerId=" + managerId +

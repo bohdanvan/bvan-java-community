@@ -24,7 +24,6 @@ public class Manager extends Employee {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", patronymic='" + patronymic + '\'' +
                 ", birthDate=" + birthDate +
                 ", hireDate=" + hireDate +
                 ", employeeIds=" + employeeIds +

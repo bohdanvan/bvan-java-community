@@ -10,7 +10,6 @@ public abstract class AbstractEmployee implements Entity<Long> {
     protected long id = IdGenerator.generateId();
     protected String name;
     protected String surname;
-    protected String patronymic;
     protected long birthDate;
     protected long hireDate;
 
@@ -39,14 +38,6 @@ public abstract class AbstractEmployee implements Entity<Long> {
         this.surname = surname;
     }
 
-    public String getPatronymic() {
-        return patronymic;
-    }
-
-    public void setPatronymic(String patronymic) {
-        this.patronymic = patronymic;
-    }
-
     public long getBirthDate() {
         return birthDate;
     }
@@ -69,7 +60,6 @@ public abstract class AbstractEmployee implements Entity<Long> {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", patronymic='" + patronymic + '\'' +
                 ", birthDate=" + birthDate +
                 ", hireDate=" + hireDate +
                 '}';

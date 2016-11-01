@@ -76,7 +76,6 @@ public class EmployeeRunner {
         Manager vasya = new Manager();
         vasya.setName("Vasya");
         vasya.setSurname("Pupkin");
-        vasya.setPatronymic("Serheevich");
         vasya.setBirthDate(getTimestamp(1975, 3, 14));
         vasya.setHireDate(getTimestamp(2000, 1, 10));
         return vasya;
@@ -86,7 +85,6 @@ public class EmployeeRunner {
         Manager yura = new Manager();
         yura.setName("Yura");
         yura.setSurname("Molchan");
-        yura.setPatronymic("Serheevich");
         yura.setBirthDate(getTimestamp(1980, 6, 8));
         yura.setHireDate(getTimestamp(2002, 10, 11));
         return yura;
@@ -96,7 +94,6 @@ public class EmployeeRunner {
         Employee bohdan = new Employee();
         bohdan.setName("Bohdan");
         bohdan.setSurname("Kutepov");
-        bohdan.setPatronymic("Serheevich");
         bohdan.setBirthDate(getTimestamp(1978, 6, 1));
         bohdan.setHireDate(getTimestamp(2002, 10, 11));
         return bohdan;
@@ -106,7 +103,6 @@ public class EmployeeRunner {
         OtherEmployee serhey = new OtherEmployee();
         serhey.setName("Serhey");
         serhey.setSurname("Serheev");
-        serhey.setPatronymic("Serheevich");
         serhey.setBirthDate(getTimestamp(1983, 6, 8));
         serhey.setHireDate(getTimestamp(2002, 10, 11));
         serhey.setPosition(Position.SECRETARY);
