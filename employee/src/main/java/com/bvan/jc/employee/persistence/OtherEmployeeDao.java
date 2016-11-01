@@ -1,7 +1,7 @@
-package com.bvan.jc.chat2.employee.persistence;
+package com.bvan.jc.employee.persistence;
 
-import com.bvan.jc.chat2.employee.OtherEmployee;
-import com.bvan.jc.chat2.employee.persistence.generic.GenericDao;
+import com.bvan.jc.employee.OtherEmployee;
+import com.bvan.jc.employee.persistence.generic.GenericDao;
 
 /**
  * @author bvanchuhov

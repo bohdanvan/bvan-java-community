@@ -1,8 +1,8 @@
-package com.bvan.jc.chat2.employee.runner;
+package com.bvan.jc.employee.runner;
 
-import com.bvan.jc.chat2.employee.OtherEmployee;
-import com.bvan.jc.chat2.employee.Position;
-import com.bvan.jc.chat2.employee.util.PropertyUtils;
+import com.bvan.jc.employee.OtherEmployee;
+import com.bvan.jc.employee.Position;
+import com.bvan.jc.employee.util.PropertyUtils;
 import com.mysql.cj.jdbc.MysqlDataSource;
 import java.sql.Connection;
 import java.sql.ResultSet;

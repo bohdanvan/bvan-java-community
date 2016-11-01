@@ -1,4 +1,4 @@
-package com.bvan.jc.chat2.employee.persistence;
+package com.bvan.jc.employee.persistence;
 
 /**
  * @author bvanchuhov

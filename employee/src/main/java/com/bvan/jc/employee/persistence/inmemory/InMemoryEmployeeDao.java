@@ -1,8 +1,8 @@
-package com.bvan.jc.chat2.employee.persistence.inmemory;
+package com.bvan.jc.employee.persistence.inmemory;
 
-import com.bvan.jc.chat2.employee.Employee;
-import com.bvan.jc.chat2.employee.Manager;
-import com.bvan.jc.chat2.employee.persistence.EmployeeDao;
+import com.bvan.jc.employee.Employee;
+import com.bvan.jc.employee.Manager;
+import com.bvan.jc.employee.persistence.EmployeeDao;
 
 import java.util.HashMap;
 import java.util.Map;

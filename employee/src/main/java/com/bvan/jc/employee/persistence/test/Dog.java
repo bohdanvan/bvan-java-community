@@ -1,7 +1,6 @@
-package com.bvan.jc.chat2.employee.persistence.test;
+package com.bvan.jc.employee.persistence.test;
 
-import com.bvan.jc.chat2.employee.Entity;
-import com.bvan.jc.chat2.employee.persistence.generic.GenericDao;
+import com.bvan.jc.employee.Entity;
 
 /**
  * @author bvanchuhov

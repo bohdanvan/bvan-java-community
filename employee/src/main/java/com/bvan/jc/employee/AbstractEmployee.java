@@ -1,6 +1,6 @@
-package com.bvan.jc.chat2.employee;
+package com.bvan.jc.employee;
 
-import com.bvan.jc.chat2.employee.util.IdGenerator;
+import com.bvan.jc.employee.util.IdGenerator;
 
 /**
  * @author bvanchuhov

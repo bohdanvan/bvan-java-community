@@ -1,4 +1,4 @@
-package com.bvan.jc.chat2.employee.util;
+package com.bvan.jc.employee.util;
 
 import java.io.IOException;
 import java.io.InputStream;

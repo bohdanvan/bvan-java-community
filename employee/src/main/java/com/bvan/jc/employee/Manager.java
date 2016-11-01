@@ -1,4 +1,4 @@
-package com.bvan.jc.chat2.employee;
+package com.bvan.jc.employee;
 
 import java.util.ArrayList;
 import java.util.List;

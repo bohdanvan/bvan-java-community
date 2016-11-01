@@ -1,4 +1,4 @@
-package com.bvan.jc.chat2.employee;
+package com.bvan.jc.employee;
 
 /**
  * @author bvanchuhov

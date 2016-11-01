@@ -1,7 +1,7 @@
-package com.bvan.jc.chat2.employee.persistence;
+package com.bvan.jc.employee.persistence;
 
-import com.bvan.jc.chat2.employee.Employee;
-import com.bvan.jc.chat2.employee.Manager;
+import com.bvan.jc.employee.Employee;
+import com.bvan.jc.employee.Manager;
 
 /**
  * @author bvanchuhov

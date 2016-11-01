@@ -1,11 +1,11 @@
-package com.bvan.jc.chat2.employee.runner;
+package com.bvan.jc.employee.runner;
 
-import com.bvan.jc.chat2.employee.OtherEmployee;
-import com.bvan.jc.chat2.employee.Position;
-import com.bvan.jc.chat2.employee.persistence.OtherEmployeeDao;
-import com.bvan.jc.chat2.employee.persistence.sql.SqlOtherEmployeeDao;
-import static com.bvan.jc.chat2.employee.util.DateUtils.getTimestamp;
-import com.bvan.jc.chat2.employee.util.PropertyUtils;
+import com.bvan.jc.employee.OtherEmployee;
+import com.bvan.jc.employee.Position;
+import com.bvan.jc.employee.persistence.OtherEmployeeDao;
+import com.bvan.jc.employee.persistence.sql.SqlOtherEmployeeDao;
+import com.bvan.jc.employee.util.PropertyUtils;
+import com.bvan.jc.employee.util.DateUtils;
 import com.mysql.cj.jdbc.MysqlDataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -46,8 +46,8 @@ public class SqlOtherEmployeeDaoRunner {
         OtherEmployee serhey = new OtherEmployee();
         serhey.setName("Serhey");
         serhey.setSurname("Serheev");
-        serhey.setBirthDate(getTimestamp(1983, 6, 8));
-        serhey.setHireDate(getTimestamp(2002, 10, 11));
+        serhey.setBirthDate(DateUtils.getTimestamp(1983, 6, 8));
+        serhey.setHireDate(DateUtils.getTimestamp(2002, 10, 11));
         serhey.setPosition(Position.SECRETARY);
         serhey.setDescription("Does some work");
         return serhey;

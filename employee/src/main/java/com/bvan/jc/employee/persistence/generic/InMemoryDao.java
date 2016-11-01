@@ -1,6 +1,6 @@
-package com.bvan.jc.chat2.employee.persistence.generic;
+package com.bvan.jc.employee.persistence.generic;
 
-import com.bvan.jc.chat2.employee.Entity;
+import com.bvan.jc.employee.Entity;
 
 import java.util.HashMap;
 import java.util.Map;

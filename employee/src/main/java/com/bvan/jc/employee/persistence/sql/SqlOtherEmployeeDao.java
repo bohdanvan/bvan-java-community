@@ -1,9 +1,9 @@
-package com.bvan.jc.chat2.employee.persistence.sql;
+package com.bvan.jc.employee.persistence.sql;
 
-import com.bvan.jc.chat2.employee.OtherEmployee;
-import com.bvan.jc.chat2.employee.Position;
-import com.bvan.jc.chat2.employee.persistence.EmployeePersistenceException;
-import com.bvan.jc.chat2.employee.persistence.OtherEmployeeDao;
+import com.bvan.jc.employee.OtherEmployee;
+import com.bvan.jc.employee.Position;
+import com.bvan.jc.employee.persistence.EmployeePersistenceException;
+import com.bvan.jc.employee.persistence.OtherEmployeeDao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

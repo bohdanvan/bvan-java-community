@@ -1,14 +1,15 @@
-package com.bvan.jc.chat2.employee.runner;
+package com.bvan.jc.employee.runner;
 
-import com.bvan.jc.chat2.employee.Employee;
-import com.bvan.jc.chat2.employee.Manager;
-import com.bvan.jc.chat2.employee.OtherEmployee;
-import com.bvan.jc.chat2.employee.Position;
-import com.bvan.jc.chat2.employee.persistence.*;
-import com.bvan.jc.chat2.employee.persistence.inmemory.InMemoryEmployeeDao;
-import com.bvan.jc.chat2.employee.persistence.inmemory.InMemoryOtherEmployeeDao;
+import com.bvan.jc.employee.Employee;
+import com.bvan.jc.employee.Manager;
+import com.bvan.jc.employee.OtherEmployee;
+import com.bvan.jc.employee.Position;
+import com.bvan.jc.employee.persistence.inmemory.InMemoryEmployeeDao;
+import com.bvan.jc.employee.persistence.inmemory.InMemoryOtherEmployeeDao;
 
-import static com.bvan.jc.chat2.employee.util.DateUtils.getTimestamp;
+import com.bvan.jc.employee.persistence.EmployeeDao;
+import com.bvan.jc.employee.persistence.OtherEmployeeDao;
+import com.bvan.jc.employee.util.DateUtils;
 
 /**
  * @author bvanchuhov
@@ -76,8 +77,8 @@ public class EmployeeRunner {
         Manager vasya = new Manager();
         vasya.setName("Vasya");
         vasya.setSurname("Pupkin");
-        vasya.setBirthDate(getTimestamp(1975, 3, 14));
-        vasya.setHireDate(getTimestamp(2000, 1, 10));
+        vasya.setBirthDate(DateUtils.getTimestamp(1975, 3, 14));
+        vasya.setHireDate(DateUtils.getTimestamp(2000, 1, 10));
         return vasya;
     }
 
@@ -85,8 +86,8 @@ public class EmployeeRunner {
         Manager yura = new Manager();
         yura.setName("Yura");
         yura.setSurname("Molchan");
-        yura.setBirthDate(getTimestamp(1980, 6, 8));
-        yura.setHireDate(getTimestamp(2002, 10, 11));
+        yura.setBirthDate(DateUtils.getTimestamp(1980, 6, 8));
+        yura.setHireDate(DateUtils.getTimestamp(2002, 10, 11));
         return yura;
     }
 
@@ -94,8 +95,8 @@ public class EmployeeRunner {
         Employee bohdan = new Employee();
         bohdan.setName("Bohdan");
         bohdan.setSurname("Kutepov");
-        bohdan.setBirthDate(getTimestamp(1978, 6, 1));
-        bohdan.setHireDate(getTimestamp(2002, 10, 11));
+        bohdan.setBirthDate(DateUtils.getTimestamp(1978, 6, 1));
+        bohdan.setHireDate(DateUtils.getTimestamp(2002, 10, 11));
         return bohdan;
     }
 
@@ -103,8 +104,8 @@ public class EmployeeRunner {
         OtherEmployee serhey = new OtherEmployee();
         serhey.setName("Serhey");
         serhey.setSurname("Serheev");
-        serhey.setBirthDate(getTimestamp(1983, 6, 8));
-        serhey.setHireDate(getTimestamp(2002, 10, 11));
+        serhey.setBirthDate(DateUtils.getTimestamp(1983, 6, 8));
+        serhey.setHireDate(DateUtils.getTimestamp(2002, 10, 11));
         serhey.setPosition(Position.SECRETARY);
         serhey.setDescription("Does some work");
         return serhey;
