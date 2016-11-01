@@ -22,3 +22,10 @@ Java Community. Чат с Богданом
 **Чат в Skype**: [Skype Link](https://join.skype.com/hUovxuzzXWPZ)
 
 **Запись чата**: [http://www.ex.ua/480980228867](http://www.ex.ua/480980228867)
+
+##Chat 3 (30.10.2016)
+**Тема**: Работа с базой данных. MySQL, JDBC, Maven. Доработка [задачи о работнике]
+(https://docs.google.com/document/d/1SQ9_LNkNxbVLw4vMqpG56WAamxEPxBxGCjdec1hxsqk/edit?usp=sharing)
+
+**Модули**: 
+[employee](https://github.com/bohdanvan/bvan-java-community/tree/master/employee/src/main/java/com/bvan/jc/chat2/employee)
