@@ -43,3 +43,5 @@ Java Community. Чат с Богданом
 [employee](https://github.com/bohdanvan/bvan-java-community/tree/master/employee/src/main/java/com/bvan/jc/chat2/employee)
 
 **Чат в Skype**: [Skype Link](https://join.skype.com/nHTOxAmisW2D)
+
+**Запись чата**: [http://www.ex.ua/773820688844](http://www.ex.ua/773820688844)
