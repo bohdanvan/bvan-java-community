@@ -24,7 +24,7 @@ Java Community. Чат с Богданом
 **Запись чата**: [http://www.ex.ua/480980228867](http://www.ex.ua/480980228867)
 
 ##Chat 3 (30.10.2016)
-**Тема**: Работа с базой данных. MySQL, JDBC, Maven. Доработка [задачи о работнике]
+**Тема**: Работа с базой данных (MySQL, JDBC, Maven). Доработка [задачи о работнике]
 (https://docs.google.com/document/d/1SQ9_LNkNxbVLw4vMqpG56WAamxEPxBxGCjdec1hxsqk/edit?usp=sharing)
 
 **Модули**: 
@@ -36,4 +36,10 @@ Java Community. Чат с Богданом
 
 ##Chat 4 (13.10.2016)
 
-**Тема**:
+**Тема**: Unit-тестирование (JUnit). Интерграционное тестирование OtherEmployeeDao (DB2).
+
+**Модули**: 
+[chat4](https://github.com/bohdanvan/bvan-java-community/tree/master/chat4), 
+[employee](https://github.com/bohdanvan/bvan-java-community/tree/master/employee/src/main/java/com/bvan/jc/chat2/employee)
+
+**Чат в Skype**: [Skype Link](https://join.skype.com/nHTOxAmisW2D)
