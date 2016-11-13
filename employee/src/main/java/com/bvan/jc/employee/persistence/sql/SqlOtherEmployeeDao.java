@@ -4,38 +4,29 @@ import com.bvan.jc.employee.OtherEmployee;
 import com.bvan.jc.employee.Position;
 import com.bvan.jc.employee.persistence.EmployeePersistenceException;
 import com.bvan.jc.employee.persistence.OtherEmployeeDao;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import javax.sql.DataSource;
 
 /**
  * @author bvanchuhov
  */
 public class SqlOtherEmployeeDao implements OtherEmployeeDao {
 
-    private final PreparedStatement psGetById;
-    private final PreparedStatement psSave;
-    private final PreparedStatement psRemove;
+    private static final String SQL_GET_BY_ID = "SELECT * FROM other_employee WHERE id = ?";
+    private static final String SQL_SAVE = "INSERT INTO other_employee(name, surname, birth_date, hire_date, position, description) " +
+            "VALUES (?, ?, ?, ?, ?, ?)";
+    private static final String SQL_DELETE = "DELETE FROM other_employee WHERE id = ?";
 
-    public SqlOtherEmployeeDao(Connection connection) {
-        try {
-            this.psGetById = connection.prepareStatement("SELECT * FROM other_employee WHERE id = ?");
-            this.psSave = connection.prepareStatement(
-                    "INSERT INTO other_employee(name, surname, birth_date, hire_date, position, description) " +
-                            "VALUES (?, ?, ?, ?, ?, ?)"
-            );
-            this.psRemove = connection.prepareStatement(
-                    "DELETE FROM other_employee WHERE id = ?"
-            );
-        } catch (SQLException e) {
-            throw new EmployeePersistenceException("Can't prepare statements", e);
-        }
+    private DataSource dataSource;
+
+    public SqlOtherEmployeeDao(DataSource dataSource) {
+        this.dataSource = dataSource;
     }
 
     @Override
     public OtherEmployee findById(Long id) {
-        try {
+        try (Connection connection = dataSource.getConnection()) {
+            PreparedStatement psGetById = connection.prepareStatement(SQL_GET_BY_ID);
             psGetById.setLong(1, id);
 
             try (ResultSet resultSet = psGetById.executeQuery()) {
@@ -52,7 +43,8 @@ public class SqlOtherEmployeeDao implements OtherEmployeeDao {
 
     @Override
     public OtherEmployee save(OtherEmployee entity) {
-        try {
+        try(Connection connection = dataSource.getConnection()) {
+            PreparedStatement psSave = connection.prepareStatement(SQL_SAVE, Statement.RETURN_GENERATED_KEYS);
             psSave.setString(1, entity.getName());
             psSave.setString(2, entity.getSurname());
             psSave.setLong(3, entity.getBirthDate());
@@ -62,7 +54,7 @@ public class SqlOtherEmployeeDao implements OtherEmployeeDao {
 
             psSave.execute();
 
-            // TODO: get generated id from db
+            entity.setId(getGeneratedId(psSave));
 
             return entity;
         } catch (SQLException e) {
@@ -70,9 +62,24 @@ public class SqlOtherEmployeeDao implements OtherEmployeeDao {
         }
     }
 
+    /**
+     * @throws EmployeePersistenceException
+     * @throws SQLException
+     */
+    private long getGeneratedId(PreparedStatement psSave) throws SQLException {
+        try (ResultSet generatedKeys = psSave.getGeneratedKeys()) {
+            if (!generatedKeys.next()) {
+                throw new EmployeePersistenceException("No id obtained");
+            }
+            return generatedKeys.getLong(1);
+        }
+    }
+
     @Override
     public OtherEmployee remove(Long id) {
-        try {
+        try(Connection connection = dataSource.getConnection()) {
+            PreparedStatement psRemove = connection.prepareStatement(SQL_DELETE);
+
             OtherEmployee prevEmployee = findById(id);
 
             if (prevEmployee != null) {

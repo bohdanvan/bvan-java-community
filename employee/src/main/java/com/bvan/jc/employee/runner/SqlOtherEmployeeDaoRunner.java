@@ -2,13 +2,12 @@ package com.bvan.jc.employee.runner;
 
 import com.bvan.jc.employee.OtherEmployee;
 import com.bvan.jc.employee.Position;
+import com.bvan.jc.employee.generator.EmployeeGenerator;
 import com.bvan.jc.employee.persistence.OtherEmployeeDao;
 import com.bvan.jc.employee.persistence.sql.SqlOtherEmployeeDao;
-import com.bvan.jc.employee.util.PropertyUtils;
 import com.bvan.jc.employee.util.DateUtils;
+import com.bvan.jc.employee.util.PropertyUtils;
 import com.mysql.cj.jdbc.MysqlDataSource;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.Properties;
 import javax.sql.DataSource;
 
@@ -18,17 +17,12 @@ import javax.sql.DataSource;
 public class SqlOtherEmployeeDaoRunner {
 
     public static void main(String[] args) {
-        try (Connection connection = getDataSource().getConnection()) {
-            OtherEmployeeDao otherEmployeeDao = new SqlOtherEmployeeDao(connection);
-            makeTask(otherEmployeeDao);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
+        DataSource dataSource = getDataSource();
+        OtherEmployeeDao otherEmployeeDao = new SqlOtherEmployeeDao(dataSource);
 
-    private static void makeTask(OtherEmployeeDao otherEmployeeDao) {
-        OtherEmployee otherEmployee = otherEmployeeDao.findById(1L);
-        System.out.println(otherEmployee);
+        for (int i = 0; i < 100_000; i++) {
+            otherEmployeeDao.save(EmployeeGenerator.randomOtherEmployee());
+        }
     }
 
     private static DataSource getDataSource() {

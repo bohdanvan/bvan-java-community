@@ -1,5 +1,7 @@
 package com.bvan.jc.employee;
 
+import java.util.Objects;
+
 /**
  * @author bvanchuhov
  */
@@ -22,6 +24,21 @@ public class OtherEmployee extends AbstractEmployee {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        OtherEmployee that = (OtherEmployee) o;
+        return position == that.position &&
+                Objects.equals(description, that.description);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), position, description);
     }
 
     @Override

@@ -31,3 +31,9 @@ Java Community. Чат с Богданом
 [employee](https://github.com/bohdanvan/bvan-java-community/tree/master/employee/src/main/java/com/bvan/jc/chat2/employee)
 
 **Чат в Skype**: [Skype Link](https://join.skype.com/g9BWsghKPXrQ)
+
+**Запись чата**: [http://www.ex.ua/226272612694](http://www.ex.ua/226272612694)
+
+##Chat 4 (13.10.2016)
+
+**Тема**:

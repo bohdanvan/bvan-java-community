@@ -1,6 +1,7 @@
 package com.bvan.jc.employee;
 
 import com.bvan.jc.employee.util.IdGenerator;
+import java.util.Objects;
 
 /**
  * @author bvanchuhov
@@ -52,6 +53,22 @@ public abstract class AbstractEmployee implements Entity<Long> {
 
     public void setHireDate(long hireDate) {
         this.hireDate = hireDate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof AbstractEmployee)) return false;
+        AbstractEmployee that = (AbstractEmployee) o;
+        return birthDate == that.birthDate &&
+                hireDate == that.hireDate &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(surname, that.surname);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname, birthDate, hireDate);
     }
 
     @Override
