@@ -1,4 +1,4 @@
-package com.bvan.jc.oop.dynamic_input.oop;
+package com.bvan.jc.oop.dynamic_input.oop.iterator;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -12,6 +12,7 @@ public class UncorruptedIntTransformIterator implements Iterator<Integer> {
 
     private final Iterator<String> iterator;
     private final Consumer<String> onBadValue;
+
     private Optional<Integer> bufferedElem = Optional.empty();
 
     public UncorruptedIntTransformIterator(Iterator<String> iterator) {

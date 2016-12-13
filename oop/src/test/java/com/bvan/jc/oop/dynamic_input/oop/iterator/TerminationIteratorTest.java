@@ -1,6 +1,7 @@
-package com.bvan.jc.oop.dynamic_input.oop;
+package com.bvan.jc.oop.dynamic_input.oop.iterator;
 
-import static com.bvan.jc.oop.dynamic_input.oop.IteratorList.listOf;
+import static com.bvan.jc.oop.dynamic_input.oop.iterator.IteratorList.listOf;
+import com.bvan.jc.oop.dynamic_input.oop.iterator.TerminationIterator;
 import java.util.Arrays;
 import java.util.Iterator;
 import static org.hamcrest.Matchers.contains;

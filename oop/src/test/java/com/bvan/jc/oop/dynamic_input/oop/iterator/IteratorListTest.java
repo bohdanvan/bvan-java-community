@@ -1,5 +1,6 @@
-package com.bvan.jc.oop.dynamic_input.oop;
+package com.bvan.jc.oop.dynamic_input.oop.iterator;
 
+import com.bvan.jc.oop.dynamic_input.oop.iterator.IteratorList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
