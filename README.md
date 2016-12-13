@@ -58,3 +58,13 @@ Java Community. Чат с Богданом
 
 **Запись чата**: ...
 
+##Chat 6 (11.12.2016)
+
+**Тема**: От процедурного программирования к чистому ООП.
+
+**Модули**:
+[oop](https://github.com/bohdanvan/bvan-java-community/tree/master/oop)
+
+**Чат в Skype**: [Skype Link](https://join.skype.com/axaAULSMcFdP)
+
+**Запись чата**: ...
