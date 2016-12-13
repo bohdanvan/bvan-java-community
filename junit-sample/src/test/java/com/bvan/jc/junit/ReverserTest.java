@@ -1,4 +1,4 @@
-package com.bvan.jc.chat4;
+package com.bvan.jc.junit;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;

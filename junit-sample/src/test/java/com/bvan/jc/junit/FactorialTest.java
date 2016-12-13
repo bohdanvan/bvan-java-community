@@ -1,6 +1,6 @@
-package com.bvan.jc.chat4;
+package com.bvan.jc.junit;
 
-import static com.bvan.jc.chat4.Factorial.factorial;
+import static com.bvan.jc.junit.Factorial.factorial;
 import java.math.BigInteger;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
