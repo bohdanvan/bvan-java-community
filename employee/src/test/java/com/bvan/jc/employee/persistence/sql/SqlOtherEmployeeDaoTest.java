@@ -14,8 +14,11 @@ import java.sql.Statement;
 import java.util.Properties;
 import javax.sql.DataSource;
 import org.apache.commons.dbcp.BasicDataSource;
+import static org.hamcrest.CoreMatchers.nullValue;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -23,16 +26,41 @@ import org.junit.Test;
  */
 public class SqlOtherEmployeeDaoTest {
 
-    @Test
-    public void addAndGetEmployee() {
-        DataSource dataSource = getDataSource();
+    private DataSource dataSource;
+    private OtherEmployeeDao otherEmployeeDao;
+
+    @Before
+    public void before() throws Exception {
+        dataSource = getDataSource();
         createTables(dataSource);
 
-        OtherEmployeeDao otherEmployeeDao = new SqlOtherEmployeeDao(dataSource);
+        otherEmployeeDao = new SqlOtherEmployeeDao(dataSource);
+    }
 
+    @After
+    public void after() throws Exception {
+        dropTables();
+    }
+
+    @Test
+    public void saveAndGetEmployee() {
         OtherEmployee employee = otherEmployeeDao.save(randomOtherEmployee());
         OtherEmployee employeeFromStorage = otherEmployeeDao.findById(employee.getId());
         assertThat(employeeFromStorage, is(employee));
+    }
+
+    @Test
+    public void saveAndRemoveEmployee_checkNoEmployeesInStorage() {
+        OtherEmployee employee = otherEmployeeDao.save(randomOtherEmployee());
+        otherEmployeeDao.remove(employee.getId());
+        OtherEmployee employeeFromStorage = otherEmployeeDao.findById(employee.getId());
+        assertThat(employeeFromStorage, is(nullValue()));
+    }
+
+    @Test
+    public void removeNonexistentEmployee() {
+        OtherEmployee removedUser = otherEmployeeDao.remove(100L);
+        assertThat(removedUser, is(nullValue()));
     }
 
     private void createTables(DataSource dataSource) {
@@ -41,6 +69,13 @@ public class SqlOtherEmployeeDaoTest {
             statement.execute(getCreationSql());
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    private void dropTables() throws SQLException {
+        try (Connection connection = dataSource.getConnection()) {
+            Statement statement = connection.createStatement();
+            statement.execute("DROP TABLE other_employee");
         }
     }
 
