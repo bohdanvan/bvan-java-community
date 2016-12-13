@@ -34,14 +34,27 @@ Java Community. Чат с Богданом
 
 **Запись чата**: [http://www.ex.ua/226272612694](http://www.ex.ua/226272612694)
 
-##Chat 4 (13.10.2016)
+##Chat 4 (13.11.2016)
 
 **Тема**: Unit-тестирование (JUnit). Интерграционное тестирование OtherEmployeeDao (DB2).
 
 **Модули**: 
-[chat4](https://github.com/bohdanvan/bvan-java-community/tree/master/chat4), 
-[employee](https://github.com/bohdanvan/bvan-java-community/tree/master/employee/src/main/java/com/bvan/jc/chat2/employee)
+[junit-sample](https://github.com/bohdanvan/bvan-java-community/tree/master/junit-sample), 
+[employee](https://github.com/bohdanvan/bvan-java-community/tree/master/employee)
 
 **Чат в Skype**: [Skype Link](https://join.skype.com/nHTOxAmisW2D)
 
 **Запись чата**: [http://www.ex.ua/773820688844](http://www.ex.ua/773820688844)
+
+##Chat 5 (27.11.2016)
+
+**Тема**: Интерграционное тестирование.
+
+**Модули**:
+[junit-sample](https://github.com/bohdanvan/bvan-java-community/tree/master/junit-sample), 
+[employee](https://github.com/bohdanvan/bvan-java-community/tree/master/employee)
+
+**Чат в Skype**: [Skype Link](https://join.skype.com/jPBkQ5BtcCht)
+
+**Запись чата**: ...
+
