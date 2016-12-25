@@ -54,8 +54,6 @@ Java Community. Чат с Богданом
 [junit-sample](https://github.com/bohdanvan/bvan-java-community/tree/master/junit-sample), 
 [employee](https://github.com/bohdanvan/bvan-java-community/tree/master/employee)
 
-**Чат в Skype**: [Skype Link](https://join.skype.com/jPBkQ5BtcCht)
-
 **Запись чата**: ...
 
 ##Chat 6 (11.12.2016)
@@ -65,6 +63,13 @@ Java Community. Чат с Богданом
 **Модули**:
 [oop](https://github.com/bohdanvan/bvan-java-community/tree/master/oop)
 
-**Чат в Skype**: [Skype Link](https://join.skype.com/axaAULSMcFdP)
+**Запись чата**: ...
+
+##Chat 7 (25.12.2016)
+
+**Тема**: Мышление интерфейсами, правильное применение полиморфизма, 'inheritance is evil', принципы SOLID
+
+**Модули**:
+[oop](https://github.com/bohdanvan/bvan-java-community/tree/master/oop)
 
 **Запись чата**: ...
